@@ -20,7 +20,7 @@ sudo mkdir -p /etc/apt/keyrings
 
 # Add NodeSource GPG key
 echo -e "${YELLOW}Adding NodeSource GPG key...${RESET}"
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gnupg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 
 # Add NodeSource repository
 echo -e "${YELLOW}Adding Node.js repository...${RESET}"
