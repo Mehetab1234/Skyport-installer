@@ -28,4 +28,4 @@ i don't know 🙃
 [YouTube](https://youtube.com/@crafting_craze_gaming?si=MzfRXHN9sQXCeWtt)
 
 
-[site](https://skyport-installer.netlify.app)
+[site](https://mehetab1234.github.io/Skyport-installer/)
