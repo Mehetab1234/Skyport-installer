@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skyport: The ultimate open-source game server management panel. Install with a single command.">
+    <meta name="keywords" content="Skyport, Game Panel, Installer, Server Management, Open Source, Docker, Node.js, Pterodactyl Alternative">
+    <meta name="author" content="Mehetab">
+    <meta property="og:title" content="Skyport Installer">
+    <meta property="og:description" content="Easily install Skyport Panel with a single command.">
+    <title>Skyport Installer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #121212;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #b3b3b3;
+            margin-bottom: 15px;
+            max-width: 90%;
+        }
+
+        .command-box {
+            background: black;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+            overflow-x: auto;
+        }
+
+        .copy-btn {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: white;
+            color: black;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icon {
+            width: 35px;
+            transition: 0.3s;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .text-btn {
+            background: none;
+            color: #ff6600;
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: underline;
+            transition: 0.3s;
+        }
+
+        .handles {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #b3b3b3;
+        }
+
+        .handles a {
+            color: #ff6600;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .handles a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #b3b3b3;
+        }
+
+        /* Light Mode */
+        body.light-mode {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .light-mode .command-box {
+            background: #f0f0f0;
+            color: black;
+        }
+
+        .light-mode .copy-btn {
+            background: #333;
+        }
+
+        .light-mode .theme-toggle {
+            background: #222;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="theme-toggle" onclick="toggleTheme()">Light Mode</button>
+
+    <h1>Skyport Installer</h1>
+
+    <p>Install Skyport Panel quickly with this single command:</p>
+
+    <div class="command-box">
+        <code id="command">bash &lt;(curl -s https://raw.githubusercontent.com/Mehetab1234/Skyport-installer/main/installer.sh)</code>
+        <button class="copy-btn" onclick="copyCommand()">Copy</button>
+    </div>
+
+    <p>Skyport is an advanced, open-source game server management panel designed to be a powerful alternative to Pterodactyl.</p>
+
+    <div class="social-links">
+        <a href="https://youtube.com/@crafting_craze_gaming" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube" class="social-icon">
+        </a>
+        <a href="https://discord.gg/uPqRTMmGr5" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/7e/Discord_logo.svg" alt="Discord" class="social-icon">
+        </a>
+    </div>
+
+    <div class="buttons">
+        <button class="text-btn" onclick="window.open('https://github.com/Mehetab1234/Skyport-installer', '_blank')">GitHub Repo</button>
+        <button class="text-btn" onclick="window.open('https://craftingcraze.unaux.com/', '_blank')">Visit Website</button>
+    </div>
+
+    <div class="handles">
+        <p>Follow us:</p>
+        <a href="https://youtube.com/@crafting_craze_gaming" target="_blank">@crafting_craze_gaming</a>
+        <a href="https://discord.gg/uPqRTMmGr5" target="_blank">our Discord</a>
+        <a href="https://github.com/Mehetab1234/Skyport-installer" target="_blank">@Mehetab1234</a>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Skyport.dev. All rights reserved.
+    </div>
+
+    <script>
+        function copyCommand() {
+            navigator.clipboard.writeText(document.getElementById("command").innerText);
+            alert("Command copied to clipboard!");
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            document.querySelector('.theme-toggle').innerText = 
+                document.body.classList.contains('light-mode') ? "Dark Mode" : "Light Mode";
+        }
+    </script>
+
+</body>
+  </html>
