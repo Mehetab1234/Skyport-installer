@@ -9,5 +9,5 @@ its fully like [pterodactyl-installer](https://github.com/pterodactyl-installer/
 this skyport installer digined for [GitHub](https://github.com) and [codesandbox](https://codesandbox.io)
 like platform so don't report us 
 ## installation 
-```plaintext
-paste here
+```plaintext 
+bash <(curl -s https://raw.githubusercontent.com/Mehetab1234/Skyport-installer/main/installer.sh)
