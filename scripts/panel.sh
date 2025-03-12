@@ -9,13 +9,18 @@ RESET="\e[0m"
 
 echo -e "${CYAN}Starting the installation process...${RESET}"
 
+# Install necessary dependencies
+echo -e "${YELLOW}Installing systemctl and gnupg...${RESET}"
+sudo apt update
+sudo apt install -y systemctl gnupg sudo curl
+
 # Create the keyrings directory
 echo -e "${YELLOW}Creating keyrings directory...${RESET}"
 sudo mkdir -p /etc/apt/keyrings
 
 # Add NodeSource GPG key
 echo -e "${YELLOW}Adding NodeSource GPG key...${RESET}"
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gnupg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 
 # Add NodeSource repository
 echo -e "${YELLOW}Adding Node.js repository...${RESET}"
@@ -30,7 +35,7 @@ sudo apt install -y nodejs git dpkg
 
 # Clone the repository
 echo -e "${YELLOW}Cloning the panel5 repository...${RESET}"
-git clone https://github.com/Mehetab1234/panel5.git
+git clone https://github.com/achul123/panel5.git
 
 # Change to the cloned directory
 cd panel5
