@@ -11,8 +11,16 @@ like platform so don't report us
 ## installation 
 ```plaintext 
 bash <(curl -s https://raw.githubusercontent.com/Mehetab1234/Skyport-installer/main/installer.sh)
+```
+
+if your any problem on GitHub or codesandbox join discord and create ticket 
 ## need to install
 ROOT ACCESS
 SUDO ACCESS
 ONLY WORK IN Ubuntu/Debian others
 i don't know 🙃
+
+## connections 
+[discord](https://discord.gg/uPqRTMmGr5)
+
+[YouTube](https://youtube.com/@crafting_craze_gaming?si=MzfRXHN9sQXCeWtt)
