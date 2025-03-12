@@ -11,3 +11,8 @@ like platform so don't report us
 ## installation 
 ```plaintext 
 bash <(curl -s https://raw.githubusercontent.com/Mehetab1234/Skyport-installer/main/installer.sh)
+## need to install
+ROOT ACCESS
+SUDO ACCESS
+ONLY WORK IN Ubuntu/Debian others
+i don't know 🙃
