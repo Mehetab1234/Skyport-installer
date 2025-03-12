@@ -57,14 +57,14 @@ echo -e "${YELLOW}Installing PM2...${RESET}"
 sudo npm install -g pm2
 
 # Start panel using PM2
-echo -e "${YELLOW}Starting panel5 with PM2...${RESET}"
-pm2 start npm --name "panel5" -- run start
+echo -e "${YELLOW}Starting panel with PM2...${RESET}"
+pm2 start index.js
 
 # Save PM2 process list and enable startup
 echo -e "${YELLOW}Saving PM2 process list...${RESET}"
 pm2 save
 
 echo -e "${YELLOW}Setting up PM2 to start on boot...${RESET}"
-pm2 startup systemd
+pm2 startup
 
 echo -e "${GREEN}Installation and setup completed successfully!${RESET}"
